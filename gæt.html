@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="da">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pigen i grøften</title>
+		<link rel="stylesheet" href="shared.css" />
+		<script src="gæt.js" defer></script>
+		<nav></nav>
+	</head>
+	<body>
+		<div class="float-box">
+			<button id="send-guess" onclick="back()">
+				Tryk her for at gå tilbage til usb-stik
+			</button>
+		</div>
+		<main>
+			<h1>Indsæt dit gæt</h1>
+
+			<label for="suspect-select">Jeg tror, at morderen er...</label>
+			<select id="suspect-select" name="suspect">
+				<option value="vælg" selected>Vælg...</option>
+				<option value="Petrine Steenstrup">Petrine Steenstrup</option>
+				<option value="Niels Bindslev">Niels Bindslev</option>
+				<option value="Jakob Rasmussen">Jakob Rasmussen</option>
+			</select>
+
+			<button
+				id="submit-guess"
+				type="button"
+				style="margin-top: 3rem"
+				onclick="submitGuess()"
+				class="disabled-button"
+			>
+				Indsend gæt
+			</button>
+		</main>
+	</body>
+</html>

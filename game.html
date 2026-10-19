@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="da">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pigen i grøften</title>
+		<link rel="stylesheet" href="shared.css" />
+		<link rel="stylesheet" href="game.css" />
+		<script src="game.js" defer></script>
+		<nav></nav>
+	</head>
+	<body>
+		<div class="float-box">
+			<p>Tryk her, når du er klar til at gætte morderen</p>
+
+			<button id="send-guess" onclick="sendGuess()">Send gæt</button>
+		</div>
+
+		<main id="start-page">
+			<h1>USB STIK FUNDET</h1>
+			<p>
+				Blandt de fysiske spor, du har modtaget, er der et USB-stik. USB stikket
+				er desværre krypteret, men når du har fundet en kode, kan du prøve at
+				dekryptere det
+			</p>
+			<div class="usb-kode-container">
+				<label for="usb-kode">Indtast kode:</label>
+				<input type="text" id="usb-codeInput" placeholder="Indtast kode her" />
+				<button type="button" id="usb-dekrypter" onclick="testCode(this)">
+					Dekrypter USB
+				</button>
+			</div>
+		</main>
+
+		<main id="video-page" style="display: none">
+			<h1>USB STIK ÅBNET</h1>
+			<p>
+				Koden er korrekt! USB stikket er blevet dekrypteret, og du har nu adgang
+				til de digitale spor. <br />
+			</p>
+			<video src="./placeholder.mp4" controls width="640"></video>
+	</body>
+</html>

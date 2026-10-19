@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+:root {
+	--brown: #5b4f3a;
+	--beige-light: #d0d1cd;
+	--beige-lighter: #eff0eb;
+	--background: #fdfdfb;
+	--text: #1a1a1a;
+	--navy-soft: rgba(117, 119, 99, 0.12);
+
+	font-family: "Spectral", serif;
+	font-kerning: none;
+	/*	background-color: var(--background);*/
+	color: var(--text);
+}
+
+a:has(> button) {
+	text-decoration: none;
+}
+
+body {
+	min-height: 100%;
+	background-image: url("background.jpg");
+	background-size: cover;
+}
+main {
+	max-width: min(80%, 80ch);
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+button {
+	font-family: "Spectral", serif;
+	font-weight: 800;
+	padding: 0.5rem 1rem;
+	background-color: var(--brown);
+	color: var(--beige-lighter);
+	border-radius: 0.3rem;
+	border: 1px solid var(--beige-lighter);
+	display: block;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+button:hover {
+	cursor: pointer;
+	border: 1px solid var(--beige-light);
+}
+
+button.disabled-button {
+	background-color: var(--beige-light);
+	color: var(--brown);
+	border: 1px solid var(--brown);
+	cursor: not-allowed;
+}
+button:focus {
+	border: 1px solid var(--brown);
+}
+
+div.float-box {
+	margin: 2rem;
+	padding: 1rem;
+	background-color: #eff0eb53;
+	/* blur effect */
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+
+	border-radius: 0.5rem;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	max-width: min(10rem, 70vw);
+
+	right: 0;
+	top: 0;
+	position: sticky;
+}
+
+@media screen and (max-width: 490px) {
+	div.float-box {
+		/* center the box horizontally */
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 70vw;
+	}
+}
+
+@media screen and (min-width: 1150px) {
+	div.float-box {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+div.float-box > p {
+	text-align: center;
+}
