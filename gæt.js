@@ -16,9 +16,15 @@ function submitGuess() {
 	if (suspectSelect.value === "vælg") {
 		return;
 	}
-	if (suspectSelect.value === "Petrine Steenstrup") {
-		window.location.href = "./correct.html";
-	} else {
-		window.location.href = "./wrong.html";
+	switch (suspectSelect.value) {
+		case "Petrine Steenstrup":
+			window.location.href = "./afslutning-petrine.html";
+			break;
+		case "Jakob Rasmussen":
+			window.location.href = "./afslutning-jakob.html";
+			break;
+		case "Niels Bindslev":
+			window.location.href = "./afslutning-niels.html";
+			break;
 	}
 }
