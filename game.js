@@ -1,7 +1,7 @@
 const correctCode = "KOM HJEM";
 
 function testCode(buttonElement) {
-	let code = document.getElementById("usb-codeInput").value;
+	let code = document.getElementById("usb-codeInput").value.toUpperCase();
 	buttonElement.disabled = true;
 	let countdown = 3;
 	buttonElement.textContent = ".";
